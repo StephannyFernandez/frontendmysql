@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleclientes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Administracion Clientes</title>
+</head>
+<body class="body-1">
+    <header>
+        <div class="navbar">
+        <div class="logo"><a href="index.html">MEDICOOP</a></div>
+        <ul class="links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="ccclientes.html">Clientes</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="form_clientes.html"> <button class="button">Agregar Clientes</button></a></li>
+        </ul>
+        
+        
+        <div class="toggle_btn">
+        <i class="fa-duotone fa-solid fa-bars-staggered"></i>
+        </div>
+        </div>
+        
+        <div class="dropdown_menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="ccclientes.html">Clientes</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="form_clientes.html">formulario</a></li>
+        
+        
+        </div>
+        </header>
+
+
+        
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+    toggleBtn.onclick = function (){
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    
+    toggleBtnIcon.classList =isOpen
+    ? 'fa-duotone fa-solid fa-bars-staggered'
+    : 'fa-duotone fa-solid fa-bars-staggered'
+    
+    
+    }
+</script>
+
+
+
+<main class="table">
+    <section class="table__header">
+    <h1>Administracion de Clientes</h1>
+    
+    </section>
+    
+    <section class="table__body">
+    
+    
+    
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="clientes-table">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+    
+    
+    
+    </section>
+    </main>
+    
+<script src="js/request.js"></script>
+<script src="js/clientes.js"></script>
+
+
+
+<script>
+  window.onload = function(){
+        mostrarDatos();
+     }
+ </script>
+
+
+    </head>
+    </body>
+    </html>

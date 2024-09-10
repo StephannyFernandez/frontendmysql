@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecitas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Administracion Citas</title>
+</head>
+<body class="body-1">
+    <header>
+        <div class="navbar">
+        <div class="logo"><a href="index.html">Doctor-<span>Line</span></a></div>
+        <ul class="links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="fomr_citas.html"> <button class="button">Agregar Citas</button></a></li>
+        </ul>
+        
+        
+        <div class="toggle_btn">
+        <i class="fa-duotone fa-solid fa-bars-staggered"></i>
+        </div>
+        </div>
+        
+        <div class="dropdown_menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="fomr_citas.html">formulario</a></li>
+        
+        
+        </div>
+        </header>
+
+
+        
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+    toggleBtn.onclick = function (){
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+    
+    toggleBtnIcon.classList =isOpen
+    ? 'fa-duotone fa-solid fa-bars-staggered'
+    : 'fa-duotone fa-solid fa-bars-staggered'
+    
+    
+    }
+</script>
+
+
+
+<main class="table">
+    <section class="table__header">
+    <h1>Administracion de Citas</h1>
+    
+    </section>
+    
+    <section class="table__body">
+    
+    
+    
+        <table class="table">
+            <thead>
+              <tr>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">nombre de medico</th>
+                  <th scope="col">especialidad</th>
+                  <th scope="col">fecha</th>
+                  <th scope="col">duracion</th>
+             
+                </tr>
+            </thead>
+            <tbody id="citas-table">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+    
+    
+    
+    </section>
+    </main>
+    
+<script src="js/request.js"></script>
+<script src="js/citas.js"></script>
+
+
+
+<script>
+    window.onload = function(){
+       mostrarCitas();
+    }
+  </script>
+  
+
+
+    </head>
+    </body>
+    </html>

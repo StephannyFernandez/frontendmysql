@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+Header{
+    height: auto;
+    width: 100%;
+    position: fixed;
+}
+
+
+.logo{
+    color: blue;
+    
+    }
+    h1{
+        color: blue;
+    }
+    
+    span{
+    
+        color: rgb(56, 252, 7);
+    }
+
+
+.body-1{
+    margin-left: 8%;
+    
+    background: url(img/radiografia.jpg) center / cover;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+
+.button{
+
+    color: #ffffff;
+    width: 95px;
+    height: 45px;
+    background-color: #3822fc;
+    border-radius: 19px;
+    font-family: "Roboto", sans-serif;
+    font-style:normal;
+    font-weight:bold;
+}
+
+
+th{
+    color: #38fc07
+}
+
+
+h1{
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-style:normal;
+    font-weight:bold;
+}
+
+
+li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: #0d01ac;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-style:normal;
+    font-weight:bold;
+
+}
+a:hover{
+    color: rgb(13, 0, 43);
+}
+
+
+
+
+/*header*/
+
+header{
+    position: relative;
+    padding: 0.2rem;
+
+}
+.navbar{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+
+
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.navbar {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+/*dropdown menu*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 220px;
+    background: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 220px;
+
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*tabla dinamica*/
+
+
+.boton-edit{
+    color: #ffffff;
+    width: 65px;
+    height: 35px;
+    background-color: #38fc07;
+    border-bottom: #01004b;
+    border-radius: 19px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+}
+
+
+.boton-elim{
+    color: #ffffff;
+    width: 75px;
+    height: 35px;
+    background-color: #b30000;
+    border-bottom: #1d04fa;
+    border-radius: 19px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+}
+
+
+
+main.table{
+    width: 82vw;
+    height: 90vh;
+    background-color:#0509f12a;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem rgb(230, 229, 229);
+    
+    overflow: hidden;
+    
+}
+
+
+
+
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #00014e;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+
+
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #0086d4;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay),background-color 0s;
+    }
+
+
+    tbody tr.hide{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    
+
+    tbody tr:hover{
+        background-color: #9ff7f754 !important;
+    }
+    
+
+    tbody tr td{
+        transition: .2s ease-in-out;
+    }
+
+
+
+
+
+
+
+.table__body {
+
+
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #ffffff;
+    
+    margin: .8rem auto;
+    
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive design*/
+
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+      display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width:576px){
+.dropdown_menu{
+    left: 2rem;
+    width: unset;
+}
+}

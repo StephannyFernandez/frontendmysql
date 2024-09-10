@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>frontendcitas</title>
+</head>
+<body>
+  
+<header>
+<div class="navbar">
+<div class="logo"><a href="index.html">Doctor-<span>Line</span></a></div>
+<ul class="links">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="citas.html">Citas</a></li>
+
+</ul>
+
+
+
+<div class="toggle_btn">
+<i class="fa-duotone fa-solid fa-bars-staggered"></i>
+</div>
+</div>
+
+<div class="dropdown_menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="citas.html">Citas</a></li>
+
+</div>
+</header>
+
+<main>
+  <section id="hero">
+  <h1>Bievenidos a Doctor-<span>Line</span></h1>
+  <p>Encuentra los mejores precios con tu mejor especialista</p>
+
+  </section>
+</main>
+
+
+<script>
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function (){
+dropDownMenu.classList.toggle('open')
+const isOpen = dropDownMenu.classList.contains('open')
+
+toggleBtnIcon.classList =isOpen
+? 'fa-duotone fa-solid fa-bars-staggered'
+: 'fa-duotone fa-solid fa-bars-staggered'
+
+
+}
+</script>
+</body>
+</html>
